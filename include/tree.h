@@ -19,7 +19,7 @@ class Tree {
             tmp->val = c;
             root->pointers.push_back(tmp);
             std::vector<char> remainingChars(vec);
-            remainingChars.erase(std::find(remainingChars.begin(), \ 
+            remainingChars.erase(std::find(remainingChars.begin(), \
                 remainingChars.end(), c));
             insert(tmp, remainingChars);
         }
@@ -28,7 +28,7 @@ class Tree {
         if (!root->isRoot) vec.push_back(root->val);
         if (root->pointers.empty()) perms.push_back(vec);
         for (Node* child : root->pointers) findPerms(child, vec);
-		}
+    }
 
  public:
     explicit Tree(const std::vector<char>&vec) {
